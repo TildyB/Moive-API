@@ -15,11 +15,11 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 app.use('/api/login', login)
-app.use('/api/reviews', reviews)
+// app.use('/api/reviews', reviews)
 
 
 
-/* mongoose.connect(env.MONGO_URL)
-app.listen(env.PORT, () => console.log(`Server running at port ${env.PORT} for Movie reviews`)) */
+ mongoose.connect(env.MONGO_URL)
+app.listen(env.PORT, () => console.log(`Server running at port ${env.PORT} for Movie reviews`)) 
 
 module.exports = app;
