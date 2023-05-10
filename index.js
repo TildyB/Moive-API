@@ -2,7 +2,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const { env } = require("./utilities/envParser");
+//const { env } = require("./utilities/envParser");
 
 const mongoose = require("mongoose");
 const express = require('express');

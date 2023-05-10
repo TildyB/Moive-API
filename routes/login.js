@@ -24,7 +24,7 @@ const Payload = z.object({
 });
 
 
-router.post("/", verify(LoginRequestSchema), async (req, res) => {
+router.post("/", /* verify(LoginRequestSchema), */ async (req, res) => {
   const loginRequest = req.body
   const idToken = await getIdToken(loginRequest.code);
   if (!idToken) return res.status(401);
