@@ -2,12 +2,12 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const { env } = require("../utilities/envParser");
+const { env } = require("./utilities/envParser");
 
 const mongoose = require("mongoose");
 const express = require('express');
-const login = require('../routes/login');
-const reviews = require('../routes/reviews');
+const login = require('./routes/login');
+const reviews = require('./routes/reviews');
 const cors = require('cors');
 
 const app = express();
