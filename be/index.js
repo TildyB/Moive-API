@@ -21,3 +21,5 @@ app.use('/api/reviews', reviews)
 
 mongoose.connect(env.MONGO_URL)
 app.listen(env.PORT, () => console.log(`Server running at port ${env.PORT} for Movie reviews`))
+
+module.exports = app;
