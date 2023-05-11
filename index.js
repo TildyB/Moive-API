@@ -26,7 +26,9 @@ const Payload = z.object({
   });
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    const user = User.find()
+    res.send(user)
+
 })
 
 
