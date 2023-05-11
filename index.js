@@ -1,9 +1,7 @@
 
 const dotenv = require("dotenv");
 dotenv.config();
-
-//const { env } = require("./utilities/envParser");
-
+const env = process.env;
 const mongoose = require("mongoose");
 const express = require('express');
 const login = require('./routes/login');
