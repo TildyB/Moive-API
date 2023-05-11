@@ -19,11 +19,11 @@ app.use(cors())
 app.use(express.json());
 // app.use('/api/reviews', reviews)
 
-const Payload = z.object({
+/* const Payload = z.object({
     name: z.string(),
     sub: z.string(),
     email: z.string().email(),
-  });
+  }); */
 
 app.get('/', (req, res) => {
     res.send('Hello World!')

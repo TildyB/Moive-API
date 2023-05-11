@@ -1,4 +1,4 @@
-const safeParseFc = (schema, data) => {
+/* const safeParseFc = (schema, data) => {
   const result = schema.safeParse(data);
   if (result.success === false) {
     console.log(result.error);
@@ -13,4 +13,4 @@ const safeParseFc = (schema, data) => {
   next()
 }
 
-module.exports = { verify }
+module.exports = { verify } */

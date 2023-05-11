@@ -1,4 +1,4 @@
-
+/* 
 const jwt = require("jsonwebtoken");
 const { env } = require("../utilities/envParser");
 
@@ -16,4 +16,4 @@ const authMW = (req, res, next) => {
     }
 }
  
-module.exports = authMW;
+module.exports = authMW; */

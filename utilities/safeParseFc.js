@@ -1,4 +1,4 @@
-
+/* 
 const safeParseFc = (schema, data) => {
     const result = schema.safeParse(data);
     if (result.success === false) {
@@ -9,4 +9,4 @@ const safeParseFc = (schema, data) => {
   }
   
   module.exports = { safeParseFc }
-  
+   */
