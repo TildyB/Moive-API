@@ -20,6 +20,12 @@ app.use('/api/login', login)
 
 
  mongoose.connect(env.MONGO_URL)
-app.listen(env.PORT, () => console.log(`Server running at port ${env.PORT} for Movie reviews`)) 
+ .then(() => {
+    app.listen(env.PORT, () => console.log(`Server running at port ${env.PORT} for Movie reviews`))
+  })
+  .catch((error) => {
+    console.error(error)
+    process.exit(1)
+  })
 
 module.exports = app;
