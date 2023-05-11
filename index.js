@@ -2,7 +2,7 @@
 const dotenv = require("dotenv");
 dotenv.config(); 
 const env = process.env;
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const express = require('express');
 const login = require('./routes/login');
 const reviews = require('./routes/reviews');
@@ -55,16 +55,16 @@ app.get('/', (req, res) => {
   }); */
 
 
-/*  mongoose.connect(env.MONGO_URL)
+ mongoose.connect(env.MONGODB_URI)
  .then(() => {
     app.listen(env.PORT, () => console.log(`Server running at port ${env.PORT} for Movie reviews`))
   })
   .catch((error) => {
     console.error(error)
-  }) */
+  })
 
-  app.listen(5000, () => {
+/*   app.listen(5000, () => {
     console.log("Running on port 5000.");
-  });
+  }); */
 
 module.exports = app;
