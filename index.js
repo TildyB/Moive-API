@@ -9,15 +9,26 @@ const reviews = require('./routes/reviews');
 const cors = require('cors');
 const User = require("./models/user");
 const jwt = require("jsonwebtoken");
-const { verify } = require("./middleWares/verify");
 const { safeParseFc } = require("./utilities/safeParseFc");
 const getIdToken = require("./token/google");
+const { z } = require("zod");
 
 const app = express();
 
 app.use(cors())
 app.use(express.json());
 // app.use('/api/reviews', reviews)
+
+const Payload = z.object({
+    name: z.string(),
+    sub: z.string(),
+    email: z.string().email(),
+  });
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
 
 app.post("/api/login", /* verify(LoginRequestSchema), */ async (req, res) => {
     const loginRequest = req.body
@@ -50,7 +61,6 @@ app.post("/api/login", /* verify(LoginRequestSchema), */ async (req, res) => {
   })
   .catch((error) => {
     console.error(error)
-    process.exit(1)
   })
 
 module.exports = app;

@@ -1,4 +1,4 @@
-
+/* 
 const express = require("express")
 const router = express.Router()
 const { z } = require("zod");
@@ -74,4 +74,4 @@ router.get('/proba',async (req,res)=>{
 }
 )
 
-module.exports = router
+module.exports = router */
