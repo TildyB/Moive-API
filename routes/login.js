@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const jwt = require("jsonwebtoken");
 const { verify } = require("../middleWares/verify");
 const { safeParseFc } = require("../utilities/safeParseFc");
@@ -24,7 +24,7 @@ const Payload = z.object({
 });
 
 
-router.post("/", /* verify(LoginRequestSchema), */ async (req, res) => {
+router.post("/",  verify(LoginRequestSchema),  async (req, res) => {
   const loginRequest = req.body
   const idToken = await getIdToken(loginRequest.code);
   if (!idToken) return res.status(401);
@@ -47,4 +47,4 @@ router.post("/", /* verify(LoginRequestSchema), */ async (req, res) => {
   const sessionToken = jwt.sign({user}, env.JWT_SECRET_KEY);
   res.send({sessionToken, username: user.name});
 });
-module.exports = router;
+module.exports = router; */
