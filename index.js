@@ -1,29 +1,29 @@
 
-/* const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 dotenv.config(); 
-const env = process.env; */
+const env = process.env;
 // const mongoose = require("mongoose");
 const express = require('express');
-/* const login = require('./routes/login');
+const login = require('./routes/login');
 const reviews = require('./routes/reviews');
 const cors = require('cors');
 const User = require("./models/user");
 const jwt = require("jsonwebtoken");
 const { safeParseFc } = require("./utilities/safeParseFc");
 const getIdToken = require("./token/google");
-const { z } = require("zod"); */
+const { z } = require("zod");
 
 const app = express();
 
-/* app.use(cors())
-app.use(express.json()); */
+app.use(cors())
+app.use(express.json());
 // app.use('/api/reviews', reviews)
 
-/* const Payload = z.object({
+const Payload = z.object({
     name: z.string(),
     sub: z.string(),
     email: z.string().email(),
-  }); */
+  });
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
