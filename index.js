@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.post("/api/login", /* verify(LoginRequestSchema), */ async (req, res) => {
+/* app.post("/api/login", verify(LoginRequestSchema),  async (req, res) => {
     const loginRequest = req.body
     const idToken = await getIdToken(loginRequest.code);
     if (!idToken) return res.status(401);
@@ -52,7 +52,7 @@ app.post("/api/login", /* verify(LoginRequestSchema), */ async (req, res) => {
     }  
     const sessionToken = jwt.sign({user}, env.JWT_SECRET_KEY);
     res.send({sessionToken, username: user.name});
-  });
+  }); */
 
 
  mongoose.connect(env.MONGO_URL)
